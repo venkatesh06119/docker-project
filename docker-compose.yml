@@ -1,1 +1,32 @@
-hi chanti
+version: '3'
+services:
+  movies:
+    image: venkatesh06119/paytmmovies:latest
+    ports:
+      - "81:80"
+    deploy:
+      replicas: 3
+
+  train:
+    image: venkatesh06119/paytmtrain:latest
+
+    ports:
+      - "82:80"
+    deploy:
+      replicas: 3
+
+  dth:
+    image: venkatesh06119/paytmdth:latest
+
+    ports:
+      - "83:80"
+    deploy:
+      replicas: 3
+
+  rec:
+    image: venkatesh06119/paytmrec:latest
+
+    ports:
+      - "84:80"
+    deploy:
+      replicas: 3
